@@ -1,0 +1,2 @@
+Este es un archivo creando usando el metodo write 
+Esta es la siguiente linea de codigo

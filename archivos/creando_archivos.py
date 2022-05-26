@@ -1,0 +1,11 @@
+f = open("./archivos/archivo.txt","w")
+f.write("Este es un archivo creando usando el metodo write \n")
+f.write("Esta es la siguiente linea de codigo")
+f.close()
+r = open("./archivos/archivo.txt","r")
+texto = r.read()
+# r.close()
+# print(texto)
+f
+text= f.read()
+print(texto)
