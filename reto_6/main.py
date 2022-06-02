@@ -41,7 +41,9 @@ vt.calcular_cinco_vendedores(empleados)
 separador()
 
 vt.calcula_mes_mas_ventas(empleados)
+separador()
 
+vt.graficar_ventas_por_mes(empleados)
 
 
 

@@ -8,7 +8,8 @@
 #          E S P A C I O    D E    T R A B A J O     A L U M N O
 # ====================================================================
 
-
+from cProfile import label
+import matplotlib.pyplot as plt
 
 def que_mes_es(numero):
     meses = {1:"Enero",2:"Febrero",3:"Marzo",
@@ -78,5 +79,22 @@ def calcula_mes_mas_ventas(empleados):
     print("El mes con mas vacunaciones fue: ", que_mes_es(mes)," con ", ventaMes, " vacunas")
 
 
-def greficar_ventas_por_mes(empleados):
-    pass
+def graficar_ventas_por_mes(empleados):
+    plt.figure(figsize=(10,6))
+    m = ["Enero","Febrero","Marzo","Abril",
+        "Mayo","Junio","Julio","Agosto",
+        "Septiembre","Octubre","Noviembre","Diciembre"]
+    c = ["blue","green","red","purple","brown","pink","gray","olive","cian"]
+    j = 0;
+    for empleado in empleados:
+        y=[]
+        for i in range(1,13):
+            y.append(empleado[i])
+        plt.plot( m, y, marker = "d",linestyle="-",color=c[j], label=empleado[0])
+        j +=1
+    plt.xlabel("Meses")
+    plt.ylabel("Vacunas")
+    plt.title("Vacunas vs Mes")
+    plt.legend()
+    plt.savefig("Grafica_1.png")
+    plt.show()
