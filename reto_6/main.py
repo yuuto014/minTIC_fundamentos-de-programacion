@@ -19,7 +19,8 @@ import vacunas as vt
 # =====================================================================
 
 #empleados
-
+def separador():
+  print("************************************************")
 empleados = [
   ["Andres",10,3,6,23,53,1,0,53,1,0,3,12],
   ["Pedro",5,23,1,7,3,0,21,3,7,12,8,2],
@@ -31,14 +32,15 @@ empleados = [
 
 
 numEmpleados = vt.leer_numero_empleados(empleados);
+separador()
 mes = int(input("Que mes desea ver (1-12): "))
-
 vt.leer_ventas_empleados_mes(empleados,mes)
+separador()
 
-vt.total_ventas_por_vendedores(empleados)
+vt.calcular_cinco_vendedores(empleados)
+separador()
 
-vt.ordenar_vendeores_por_ventas(empleados)
-
+vt.calcula_mes_mas_ventas(empleados)
 
 
 
